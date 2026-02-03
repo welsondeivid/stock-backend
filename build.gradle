@@ -22,6 +22,7 @@ dependencies {
     testImplementation 'io.rest-assured:rest-assured'
     implementation('io.quarkus:quarkus-hibernate-orm')
     implementation('io.quarkus:quarkus-jdbc-mysql')
+    implementation("io.quarkus:quarkus-flyway")
 }
 
 group = 'com.example'
@@ -35,6 +36,7 @@ java {
 test {
     systemProperty "java.util.logging.manager", "org.jboss.logmanager.LogManager"
     jvmArgs "--add-opens", "java.base/java.lang=ALL-UNNAMED"
+    failOnNoDiscoveredTests = false
 }
 compileJava {
     options.encoding = 'UTF-8'
