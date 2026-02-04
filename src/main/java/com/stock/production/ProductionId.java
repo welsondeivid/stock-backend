@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-public class ProductRawMaterialId implements Serializable {
+public class ProductionId implements Serializable {
 
     @NotNull
     @Column(nullable = false, name = "product_code", length = 20)
@@ -21,8 +21,8 @@ public class ProductRawMaterialId implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ProductRawMaterialId)) return false;
-        ProductRawMaterialId that = (ProductRawMaterialId) o;
+        if (!(o instanceof ProductionId)) return false;
+        ProductionId that = (ProductionId) o;
         return Objects.equals(productCode, that.productCode) &&
                 Objects.equals(rawMaterialCode, that.rawMaterialCode);
     }

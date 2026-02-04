@@ -1,6 +1,5 @@
 package com.stock.product;
 
-import com.stock.production.ProductRawMaterial;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;

@@ -9,11 +9,11 @@ import jakarta.validation.constraints.Positive;
 
 @Entity
 @Table(name = "product_raw_material")
-public class ProductRawMaterial extends PanacheEntityBase{
+public class Production extends PanacheEntityBase{
 
     @EmbeddedId
     @NotNull
-    public ProductRawMaterialId id;
+    public ProductionId id;
 
     @NotNull
     @Positive
