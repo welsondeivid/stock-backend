@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 @Entity
-@Table(name = "product_raw_material")
+@Table(name = "composition")
 public class Composition extends PanacheEntityBase{
 
     @EmbeddedId

@@ -10,7 +10,7 @@ CREATE TABLE raw_material (
     amount INT NOT NULL
 );
 
-CREATE TABLE product_raw_material (
+CREATE TABLE composition (
     product_code VARCHAR(20) NOT NULL,
     raw_material_code VARCHAR(20) NOT NULL,
     required INT NOT NULL,
