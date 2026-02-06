@@ -77,6 +77,6 @@ public class CompositionService {
 
     @Transactional
     public void deleteByRawCode(String rawMaterialCode) {
-        compositionRepository.delete("id.rawMaterial", rawMaterialCode);
+        compositionRepository.delete("id.rawMaterialCode", rawMaterialCode);
     }
 }

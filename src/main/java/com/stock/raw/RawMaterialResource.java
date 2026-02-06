@@ -1,5 +1,6 @@
 package com.stock.raw;
 
+import com.stock.compostion.CompositionService;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
@@ -14,6 +15,9 @@ public class RawMaterialResource {
 
     @Inject
     RawMaterialService rawMaterialService;
+
+    @Inject
+    CompositionService compositionService;
 
     @GET
     public List<RawMaterial> listAll(){
@@ -44,6 +48,8 @@ public class RawMaterialResource {
     @DELETE
     @Path("/{code}")
     public void delete(@PathParam("code") String code){
+
+        compositionService.deleteByRawCode(code);
 
         rawMaterialService.delete(code);
     }
