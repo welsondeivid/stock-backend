@@ -15,6 +15,9 @@ boas práticas de arquitetura e APIs REST performáticas.
 
 ### Como rodar o projeto
 
+Cole o conteúdo de env.example em um novo arquivo env e adicione suas credenciais do mysql<br>
+
+
 ```bash
 /gradlew quarkusDev
 ```
